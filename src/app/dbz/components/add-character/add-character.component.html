@@ -1,0 +1,19 @@
+<h4>Agregar personaje</h4>
+
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input type="text"
+  [(ngModel)]="character.name"
+  name="name"
+  class="form-control mb-2"
+  placeholder="Nombre">
+
+  <input type="number"
+  [(ngModel)]="character.power"
+  name="power"
+  class="form-control mb-2"
+  placeholder="Poder">
+
+    <!-- ngModel: enlazo el input con el 'character' que creé en el archivo ts, actualiza los datos según lo que rellene e el form. Tengo que importar FormsModule en el dbz.module.ts -->
+
+  <button class="btn btn-primary" type="submit">Agregar</button>
+</form>

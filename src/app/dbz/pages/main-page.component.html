@@ -1,0 +1,12 @@
+<h1>DBZ Personajes</h1>
+
+<div class="row">
+  <div class="col">
+    <app-dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></app-dbz-list>
+  </div>
+
+  <div class="col">
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+    <!-- escucho el 'onNewCharacter' que creé en el add-character-component.ts - una vez que se emita, se realiza la función 'onNewCharacter' que creo en el main-page-component.ts -->
+  </div>
+</div>
